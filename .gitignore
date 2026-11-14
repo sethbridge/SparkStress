@@ -1,0 +1,8 @@
+# build artifact
+gpu_stress
+
+# runtime artifacts (also created under LOGDIR when set)
+*.log
+gpu_status.txt
+thermal_summary.txt
+cpu_stress_summary.txt
