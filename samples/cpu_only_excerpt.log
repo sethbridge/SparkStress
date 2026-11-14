@@ -1,0 +1,18 @@
+# CPU-only run, 2026-11-14 01:18:00-01:20:39 UTC (~2m40s), 20 cores (10x X925 + 10x A725)
+# Result: NO thermal throttle. Cores pinned at 100% of max the whole time
+# (ratio=1000) while the hottest thermal zone climbed 71.6C -> 90.3C.
+# (ratio = avg per-core frequency in per-mille of scaling_max_freq; 1000 = no slowdown)
+# Excerpt reconstructed from session output (the raw log was overwritten by the
+# subsequent combined run).
+---
+=== cpu stress start 2026-11-14 01:18:00 UTC ===
+stress-ng pid=1710901 on 20 cores
+baseline max temp: 71600 raw
+01:18:00 ratio=1000 max_temp=71600 load=1.25
+...
+01:20:15 ratio=1000 max_temp=85100 load=18.24
+01:20:17 ratio=1000 max_temp=85000 load=18.38
+01:20:22 ratio=1000 max_temp=85000 load=18.75
+01:20:28 ratio=1000 max_temp=86900 load=18.93
+01:20:35 ratio=1000 max_temp=89600 load=19.10
+01:20:37 ratio=1000 max_temp=90300 load=19.25

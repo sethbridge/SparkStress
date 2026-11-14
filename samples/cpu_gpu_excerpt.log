@@ -1,0 +1,14 @@
+# Combined CPU+GPU run, 2026-11-14 01:35-01:45 UTC (~10 min)
+# Result: no thermal trip. GPU temp stayed 64-72C while power dropped 92W -> ~47W
+# and SM clock 2411 -> ~2200 MHz under shared-package power allocation
+# (gflops fell 21k -> 15.6k; CPU held 100% throughout; throttle bits 0x0)
+---
+=== combined stress start Sat Nov 14 01:35:19 AM UTC 2026 ===
+cpu stress-ng pid=1762540 ; gpu_stress pid=1762541
+baseline gpu: 64, 2405, 42.23
+01:35:20 cpu_ratio=1000 gpu_temp=64 gpu_sm=2405 gpu_pwr=42.23W gpu_util=96% gflops=? bits=0x0000000000000000 gpu_th=none load=1.20
+...
+01:45:07 cpu_ratio=1000 gpu_temp=69 gpu_sm=2229 gpu_pwr=47.50W gpu_util=96% gflops=15650.9 bits=0x0000000000000000 gpu_th=none load=21.89
+01:45:09 cpu_ratio=1000 gpu_temp=70 gpu_sm=2223 gpu_pwr=47.06W gpu_util=96% gflops=15616.3 bits=0x0000000000000000 gpu_th=none load=21.90
+01:45:11 cpu_ratio=1000 gpu_temp=70 gpu_sm=1950 gpu_pwr=50.59W gpu_util=96% gflops=15611.0 bits=0x0000000000000000 gpu_th=none load=21.90
+01:45:13 cpu stress-ng died
